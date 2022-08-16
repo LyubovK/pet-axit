@@ -14,6 +14,13 @@
 
 .mobile-nav-toggle {
   display: none;
+  .icon-close,
+  .icon-menu {
+    color: $clr-primary-100;
+    font-size: $fs-700;
+  }
+  @include breakpoint(md) {
+  }
 }
 
 .nav {
@@ -36,6 +43,49 @@
   }
 }
 
+@include breakpoint(md) {
+  .nav {
+    display: none;
+
+    position: fixed;
+    z-index: 10;
+    padding: $size-600;
+    /*inset определяет логический блок и встроенные начальное и конечное смещения элемента*/
+    inset: $size-900 $size-100 auto;
+    max-width: 30rem;
+    margin-left: auto;
+    background: $clr-primary-900;
+    border-radius: $size-100;
+    box-shadow: 0 0 0 0.75em rgba(0, 0, 0, 0.05);
+
+    &__list {
+      display: grid;
+      gap: $size-600;
+      text-align: center;
+      font-weight: $fw-bold;
+    }
+
+    & > * + * {
+      border-top: 1px solid $clr-primary-600;
+    }
+  }
+
+  .nav[data-visible] {
+    display: block;
+  }
+
+  .mobile-nav-toggle {
+    position: fixed;
+    display: block;
+    top: 0.857em;
+    right: 1em;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    padding: 0.5em;
+  }
+}
+
 .hero-wrap {
   position: relative;
   background-position: center;
@@ -43,7 +93,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   //   height: min(78vh, 100%);
-  min-height: 78vh;
+  // min-height: 78vh;
   &::after {
     content: '';
 
@@ -65,10 +115,14 @@
 
     min-height: 78vh;
     padding: 2em 0;
+
+    @include breakpoint(md) {
+      min-height: 60vh;
+    }
   }
 
   &__content {
-    width: min(60%, 100% - 360px);
+    width: max(100%, 100% - 360px);
   }
 
   .primary-heading {
@@ -90,7 +144,7 @@
 
   &__paragraph {
     font-family: $ff-accent;
-    font-size: $fs-600;
+    font-size: $fs-500;
     color: $clr-primary-200;
     padding: 30px 0 44px;
     line-height: 23px;
@@ -131,5 +185,9 @@
   .btn {
     padding-block: 1.33em;
     justify-content: center;
+  }
+
+  @include breakpoint(md) {
+    display: none;
   }
 }
