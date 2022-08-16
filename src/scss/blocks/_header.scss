@@ -1,0 +1,135 @@
+.nav-wrap {
+  padding: 19px 0;
+  background: $clr-primary-900;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  .container {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  width: 79px;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.nav {
+  &__list {
+    font-size: $fs-nav;
+    display: flex;
+    /*функция clamp() задаёт*/
+    /* значение в диапазоне между указанными нижней и верхней границами.*/
+    gap: clamp($size-400, 5vw, $size-700);
+  }
+  &__link {
+    text-decoration: none;
+    color: $clr-primary-100;
+    font-weight: $fw-smi-bold;
+    opacity: 0.8;
+    &:hover,
+    &:focus {
+      color: $clr-accent-400;
+    }
+  }
+}
+
+.hero-wrap {
+  position: relative;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //   height: min(78vh, 100%);
+  min-height: 78vh;
+  &::after {
+    content: '';
+
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 78vh;
+    padding: 2em 0;
+  }
+
+  &__content {
+    width: min(60%, 100% - 360px);
+  }
+
+  .primary-heading {
+    position: relative;
+    padding: 33px 0 36px;
+    &::after {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 64px;
+      height: 2px;
+
+      background-color: $clr-primary-100;
+      box-shadow: 0px 3px 10px rgb(0 0 0 / 24%);
+    }
+  }
+
+  &__paragraph {
+    font-family: $ff-accent;
+    font-size: $fs-600;
+    color: $clr-primary-200;
+    padding: 30px 0 44px;
+    line-height: 23px;
+    max-width: 52ch;
+  }
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 360px;
+  background: inherit;
+  background-color: $clr-primary-100;
+  border: none;
+  border-radius: 2px;
+
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 24%);
+  //   & > * {
+  //     width: 100%;
+  //   }
+  &__title {
+    background-color: $clr-neutral-200;
+    color: $clr-primary-700;
+    text-align: center;
+    padding: 0.8em 0;
+  }
+  fieldset {
+    padding: 2em 2.6em 3.5em;
+  }
+  input {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 2.6em;
+    }
+  }
+
+  .btn {
+    padding-block: 1.33em;
+    justify-content: center;
+  }
+}
