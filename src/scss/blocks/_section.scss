@@ -161,7 +161,7 @@
     opacity: 0;
 
     height: 100%;
-    width: 60ch;
+    width: min(55ch, 60ch);
     padding: 0.5em 0;
 
     flex: 1 0 60ch;
