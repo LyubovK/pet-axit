@@ -1,0 +1,24 @@
+.standart {
+  padding-block: 7.14em;
+
+  @include breakpoint(md) {
+    padding-block: 6.14em;
+  }
+  @include breakpoint(sm) {
+    padding-block: 2.14em;
+  }
+  .container {
+    @include flex(center, space-between, unset);
+    flex-direction: row-reverse;
+    gap: clamp(0.8rem, 10vw, 14.4rem);
+    @include breakpoint(sm) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__content {
+    flex: 1 0 40%;
+  }
+  &__paragraph {
+    padding-top: 2.14em;
+  }
+}

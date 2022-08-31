@@ -1,0 +1,45 @@
+.brand-bar {
+  background-color: $clr-primary-100;
+  box-shadow: 0 1px 2px $clr-primary-600;
+  padding: 30px 0;
+  .container {
+    @include flex(center, space-between, wrap);
+    gap: min($size-300, $size-800);
+    @include breakpoint(md) {
+      justify-content: center;
+    }
+  }
+  &__text {
+    padding: 1em 0;
+    max-width: 42ch;
+
+    @include breakpoint(md) {
+      width: auto;
+    }
+
+    p {
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+  }
+}
+
+.social-up {
+  flex-grow: 1;
+  &__list {
+    @include flex(unset, flex-end, unset);
+    font-size: clamp($fs-400, 4vw, $fs-800);
+    gap: clamp($size-500, 5vw, $size-900);
+    @include breakpoint(md) {
+      justify-content: space-evenly;
+    }
+  }
+  &__link {
+    color: $clr-primary-400;
+    transition: color 0.2s ease;
+    &:hover {
+      color: $clr-primary-700;
+    }
+  }
+}

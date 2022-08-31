@@ -1,0 +1,23 @@
+.design {
+  @extend %bg-black;
+  @include bg-setting(center, local, no-repeat, cover);
+
+  .btn {
+    @include breakpoint(md) {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    @include flex(center, center, unset);
+    flex-direction: column;
+    height: 290px;
+  }
+
+  .sections-subtitle {
+    @include clr-opacity($clr-primary-100, 0.8);
+  }
+}

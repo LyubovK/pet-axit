@@ -1,0 +1,154 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+
+  @extend %font-primary;
+  @include font($size: $fs-body, $height: 2rem, $weight: $fw-rgular);
+
+  color: $clr-primary-600;
+  background-color: $clr-primary-100;
+}
+
+a {
+  text-decoration: none;
+}
+
+fieldset {
+  border: 0;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+.bg-gray {
+  background-color: $clr-neutral-200;
+}
+
+h1 {
+  @extend %font-accent;
+  @include font($size: $fs-primary-heading, $height: 1.3, $weight: $fw-rgular);
+
+  color: $clr-primary-100;
+  font-size: clamp(2.2rem, calc(1rem + 2vw), $fs-600);
+
+  padding: 0.9em 0 1em;
+
+  @include pseudo() {
+    background: $clr-primary-100;
+    width: 64px;
+    height: 2px;
+  }
+}
+
+h2 {
+  @extend %font-accent;
+
+  @include font(
+    $size: $fs-primary-heading,
+    $height: $fs-700,
+    $weight: $fw-rgular
+  );
+  font-size: clamp(2.2rem, calc(1rem + 2vw), $fs-600);
+  padding-bottom: 0.83em;
+  color: $clr-primary-800;
+  &[data-color='white'] {
+    color: $clr-primary-100;
+
+    &::after {
+      background: $clr-primary-100;
+    }
+  }
+
+  @include pseudo($left: 50%) {
+    background: $clr-accent-400;
+    // left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 2px;
+  }
+}
+
+h4 {
+  @include font($size: $fs-300, $height: normal, $weight: $fw-bold);
+  color: $clr-primary-800;
+
+  &[data-border='bottom'] {
+    padding-bottom: 2.9rem;
+    @include pseudo($left: 0) {
+      background: $clr-accent-400;
+      width: 64px;
+      height: 2px;
+    }
+  }
+}
+
+.align-center {
+  text-align: center;
+}
+
+.heading-block {
+  text-align: center;
+  padding-bottom: 3.6em;
+}
+
+.sections-subtitle {
+  @include font($size: $fs-100, $height: $fs-300, $weight: $fw-rgular);
+  color: $clr-primary-600;
+  padding-block: 2.14em;
+  text-align: center;
+}
+
+/*???куда это???*/
+
+textarea,
+input {
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom-color: $clr-primary-600;
+  color: $clr-primary-800;
+  padding: 0.7em 1em;
+  transition: all 0.2s ease;
+  &:focus-visible {
+    border: 1px solid $clr-accent-400;
+  }
+}
+::placeholder {
+  color: $clr-primary-600;
+}
+
+// .txt-prim
+
+.bg-neutral-200 {
+  background: $clr-neutral-200;
+}

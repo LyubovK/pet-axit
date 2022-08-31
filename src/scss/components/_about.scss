@@ -1,0 +1,46 @@
+.about {
+  padding-block: 7.14em;
+
+  @include breakpoint(md) {
+    padding-block: 6.14em;
+  }
+  @include breakpoint(sm) {
+    padding-block: 2.14em;
+  }
+
+  &__card-list {
+    display: flex;
+    gap: $size-600;
+
+    @include breakpoint(md) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.card {
+  @include flex(center, center, unset);
+  flex-direction: column;
+  text-align: center;
+
+  &__title {
+    padding-block: 1.25em;
+  }
+  &__icon {
+    width: 7rem;
+    height: 7rem;
+
+    @include flex(center, center, unset);
+
+    border-radius: 100%;
+    border: 2px solid $clr-accent-400;
+
+    font-size: clamp(2.8rem, 3vw, $fs-500);
+    color: $clr-accent-400;
+  }
+
+  @include breakpoint(md) {
+    width: 35ch;
+  }
+}

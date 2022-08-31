@@ -20,7 +20,6 @@ const swiper = new Swiper('.mySwiper', {
   },
 });
 
-const primaryHeader = document.querySelector('.primary-header');
 const navToggle = document.querySelector('.mobile-nav-toggle');
 const primeryNav = document.querySelector('.nav');
 
@@ -29,5 +28,4 @@ navToggle.addEventListener('click', () => {
     ? navToggle.setAttribute('aria-expended', false)
     : navToggle.setAttribute('aria-expended', true);
   primeryNav.toggleAttribute('data-visible');
-  primaryHeader.toggleAttribute('data-overlay');
 });

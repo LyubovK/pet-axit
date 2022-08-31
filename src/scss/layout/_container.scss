@@ -1,0 +1,12 @@
+.container {
+  $max-width: 1110px;
+  $padding: 1rem;
+
+  padding-inline: $padding;
+  width: min(($max-width), 100% - ($padding * 2));
+  margin-inline: auto;
+
+  //   @include breakpoint(md) {
+  //     $max-width: 768px;
+  //   }
+}

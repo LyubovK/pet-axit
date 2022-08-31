@@ -1,0 +1,28 @@
+@import 'abstracts/mixin';
+@import 'abstracts/breakpoints';
+@import 'abstracts/constans';
+@import 'abstracts/placeholders';
+
+@import 'base/social-icons';
+@import 'base/normalize';
+@import 'base/base';
+@import 'base/buttons';
+@import 'base/humburger';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/container';
+@import 'layout/columns';
+
+@import 'components/navigation';
+@import 'components/brands';
+@import 'components/tabs';
+@import 'components/sublist';
+@import 'components/standart';
+@import 'components/about';
+@import 'components/pricing';
+@import 'components/reviews';
+@import 'components/design';
+@import 'components/contacts';
+
+@import 'vendors/swiper';

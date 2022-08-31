@@ -1,0 +1,88 @@
+.hero-wrap {
+  @extend %bg-black;
+
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .container {
+    position: relative;
+    z-index: 1;
+
+    @include flex(center, space-between, unset);
+
+    min-height: 641px;
+    padding-block: 2em;
+
+    @include breakpoint(md) {
+      min-height: 60vh;
+    }
+  }
+
+  &__content {
+    width: calc(100% - 360px);
+    @include breakpoint(md) {
+      width: 100%;
+    }
+
+    img {
+      width: clamp(8rem, 12.5vw, 17.5rem);
+    }
+  }
+
+  &__paragraph {
+    font-family: $ff-accent;
+    font-size: $fs-200;
+
+    @include clr-opacity($clr-primary-100, 0.8);
+    padding: 30px 0 44px;
+    line-height: 23px;
+    max-width: 52ch;
+  }
+}
+
+.signup-form {
+  @extend %transition;
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 360px;
+  background: inherit;
+  background-color: $clr-primary-100;
+  border: none;
+  border-radius: 2px;
+
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 24%);
+
+  &__title {
+    background-color: $clr-neutral-200;
+    color: $clr-primary-700;
+    text-align: center;
+    padding: 0.8em 0;
+  }
+  fieldset {
+    padding: 2em 2.6em 3.5em;
+  }
+  input {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 2.6em;
+    }
+  }
+
+  .btn {
+    padding-block: 1.33em;
+    justify-content: center;
+  }
+
+  @include breakpoint(md) {
+    transform: translateY(-1000%);
+  }
+}

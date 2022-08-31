@@ -1,0 +1,54 @@
+$clr-accent-400: #ff8b38;
+$clr-accent-300: #ff9d52;
+
+$clr-primary-900: #000000;
+$clr-primary-800: #212121;
+$clr-primary-700: #333333;
+$clr-primary-600: #86878b;
+$clr-primary-400: #bdbdbd;
+$clr-primary-300: rgba(255, 255, 255, 0.702);
+$clr-primary-200: rgba(255, 255, 255, 0.8);
+$clr-primary-100: rgb(255, 255, 255);
+
+$clr-neutral-200: #f5f5f5;
+$clr-neutral-100: hsl(0, 0%, 100%);
+
+$ff-primary: 'Open Sans', sans-serif;
+$ff-accent: 'Raleway', sans-serif;
+
+$ff-body: $ff-primary;
+$ff-primary-heading: $ff-accent;
+
+$fw-bold: 700;
+$fw-smi-bold: 600;
+$fw-medium: 500;
+$fw-rgular: 400;
+$fw-light: 300;
+
+$fs-000: 1rem; /*10*/
+$fs-100: 1.4rem; /*14*/
+$fs-150: 1.5rem; /*15*/
+$fs-200: 1.6rem; /*16*/
+$fs-300: 2rem; /*20*/
+$fs-400: 2.4rem; /*24*/
+$fs-500: 3.2rem; /*32*/
+$fs-600: 3.6rem; /*36*/
+$fs-700: 4.3rem; /*43*/
+$fs-800: 4.8rem; /*48*/
+
+$fs-body: $fs-100;
+$fs-primary-heading: $fs-600;
+$fs-secondary-heading: $fs-300;
+$fs-nav: $fs-100;
+$fs-button: $fs-150;
+
+$size-100: 0.4rem; /*4*/
+$size-200: 0.8rem; /*8*/
+$size-300: 1rem; /*10*/
+$size-400: 1.2rem; /*12*/
+$size-500: 2rem; /*20*/
+$size-600: 3.2rem; /*32*/
+$size-700: 4.8rem; /*48*/
+$size-800: 5.8rem; /*57.6*/
+$size-900: 6.4rem; /*64*/
+$size-950: 14.4rem; /*144*/

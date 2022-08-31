@@ -1,0 +1,56 @@
+@use 'sass:math';
+
+@mixin font($size, $height: $size, $weight: bold, $style: normal) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin pseudo($loc: after, $content: '', $pos: absolute, $bottom: 0, $left: 0) {
+  position: relative;
+
+  &::#{$loc} {
+    content: $content;
+    position: $pos;
+    bottom: $bottom;
+    left: $left;
+    @content;
+  }
+}
+
+@mixin columns($width) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > * {
+    flex-basis: $width;
+  }
+}
+
+@mixin bg-setting(
+  $position: top center,
+  $attachment: fixed,
+  $repeat: no-repeat,
+  $size: cover
+) {
+  background-position: $position;
+  background-attachment: $attachment;
+  background-repeat: $repeat;
+  background-size: $size;
+}
+
+@mixin flex($align-item, $justify-content, $wrap) {
+  display: flex;
+  align-items: $align-item;
+  justify-content: $justify-content;
+  flex-wrap: $wrap;
+}
+
+@mixin bg-opacity($color, $opacity: 0.5) {
+  background-color: rgba($color, $opacity);
+}
+
+@mixin clr-opacity($color, $opacity: 0.5) {
+  color: rgba($color, $opacity);
+}

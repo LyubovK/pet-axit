@@ -1,0 +1,82 @@
+.pricing {
+  background-color: $clr-neutral-200;
+  padding-block: 7.14em;
+
+  @include breakpoint(md) {
+    padding-block: 6.14em;
+  }
+  @include breakpoint(sm) {
+    padding-block: 2.14em;
+  }
+
+  &__block {
+    display: flex;
+    align-items: flex-end;
+    gap: 2.5rem;
+    @include breakpoint(md) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.pricing-card {
+  box-shadow: 0px 1px 2px $clr-primary-400;
+  flex: 0 1 33.3333%;
+  text-align: center;
+
+  &_big {
+    .pricing-card__cost {
+      border: 0;
+    }
+
+    .description__item_special {
+      color: $clr-primary-100;
+      background-color: $clr-accent-400;
+    }
+  }
+  &__title {
+    background-color: $clr-primary-700;
+    padding: 0.8em 0;
+    border-bottom: 2px solid $clr-neutral-200;
+    p {
+      color: $clr-primary-100;
+    }
+  }
+  &__cost {
+    padding: 2.14em 0 1.42em;
+    font-family: $ff-accent;
+    font-weight: $fw-bold;
+    color: $clr-primary-100;
+    background-color: $clr-primary-700;
+    border-bottom: 5px solid $clr-accent-400;
+  }
+
+  @include breakpoint(md) {
+    width: 100%;
+    flex: 0 1 100%;
+  }
+}
+
+.currency {
+  font-size: 30px;
+}
+.price {
+  font-size: 70px;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+.description {
+  &__list {
+    background-color: $clr-primary-100;
+    width: 100%;
+
+    & > * + * {
+      border-top: 1px solid $clr-neutral-200;
+    }
+  }
+  &__item {
+    padding: 1em 0;
+  }
+}

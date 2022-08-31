@@ -1,0 +1,28 @@
+.btn {
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  padding: 0.8em 2em;
+  @extend %transition;
+  @include font($size: $fs-button, $height: 1, $weight: $fw-bold);
+
+  &_primary {
+    border: 2px solid $clr-primary-100;
+    color: $clr-primary-100;
+    background-color: transparent;
+    &:hover,
+    &:focus-visible {
+      background-color: $clr-primary-100;
+      color: $clr-primary-700;
+    }
+  }
+  &_accent {
+    color: $clr-primary-100;
+    background-color: $clr-accent-400;
+    &:hover,
+    &:focus-visible {
+      background-color: $clr-accent-300;
+    }
+  }
+}
