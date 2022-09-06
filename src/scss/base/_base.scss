@@ -28,7 +28,7 @@ body {
 }
 
 body {
-  text-rendering: optimizeSpeed;
+  // text-rendering: optimizeSpeed;
 
   @extend %font-primary;
   @include font($size: $fs-body, $height: 2rem, $weight: $fw-rgular);

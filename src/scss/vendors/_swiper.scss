@@ -1,4 +1,5 @@
 .swiper {
+  padding-top: 3.6em;
   width: 100%;
   height: 100%;
 }
@@ -7,4 +8,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  z-index: 20;
+
+  top: 1.8em;
+  right: 0;
+  left: auto;
+  color: $clr-primary-800;
+  &::after {
+    font-size: $fs-300;
+  }
+}
+
+.swiper-button-prev {
+  right: 20px;
 }

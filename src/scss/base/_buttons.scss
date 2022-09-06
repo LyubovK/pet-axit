@@ -4,6 +4,8 @@
   text-decoration: none;
   border: 0;
   padding: 0.8em 2em;
+  box-shadow: 0px 1px 2px rgb(0 0 0 / 24%);
+
   @extend %transition;
   @include font($size: $fs-button, $height: 1, $weight: $fw-bold);
 

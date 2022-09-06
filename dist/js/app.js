@@ -6,6 +6,10 @@ const swiper = new Swiper('.mySwiper', {
   autoplay: {
     delay: 5000,
   },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -16,6 +20,19 @@ const swiper = new Swiper('.mySwiper', {
       slidesPerView: 2,
       spaceBetween: 20,
       allowTouchMove: false,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 60,
+      allowTouchMove: false,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     },
   },
 });

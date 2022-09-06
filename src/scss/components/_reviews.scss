@@ -7,6 +7,10 @@
   @include breakpoint(sm) {
     padding-block: 2.14em;
   }
+
+  .heading-block {
+    padding-bottom: 0;
+  }
 }
 .review-card {
   &__review {
